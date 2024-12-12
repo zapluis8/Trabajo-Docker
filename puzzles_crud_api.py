@@ -8,7 +8,7 @@ puzzles = []
 # Endpoints CRUD (Crear, Leer, Actualizar, Eliminar)
 
 # Crear un nuevo puzzle
-@app.route('/puzzles', methods=['POST'])
+@app.route('/crear', methods=['POST'])
 def create_puzzle():
     # Obtener los datos del cuerpo de la solicitud
     data = request.json
@@ -42,7 +42,7 @@ def get_puzzle(id):
     return jsonify(puzzle)
 
 # Actualizar un puzzle
-@app.route('/puzzles/<int:id>', methods=['PUT'])
+@app.route('/actualizar', methods=['PUT'])
 def update_puzzle(id):
     # Obtener los datos del cuerpo de la solicitud
     data = request.json
@@ -59,7 +59,7 @@ def update_puzzle(id):
     return jsonify(puzzle)
 
 # Eliminar un puzzle
-@app.route('/puzzles/<int:id>', methods=['DELETE'])
+@app.route('/eliminar', methods=['DELETE'])
 def delete_puzzle(id):
     global puzzles
     # Filtrar la lista para eliminar el puzzle con el ID especificado

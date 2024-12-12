@@ -11,7 +11,7 @@ COPY . /app
 RUN pip install --no-cache-dir flask flask-sqlalchemy
 
 # Exponer el puerto de la aplicación
-EXPOSE 8000
+EXPOSE 5000
 
 # Comando para ejecutar la aplicación
 CMD ["python", "puzzles_crud_api.py"]
