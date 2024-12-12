@@ -1,5 +1,10 @@
 # Trabajo Docker
 
+# Para correre el API debes de estar en el mismo directorio que tus archivos y usar el siguiente comando
+docker build -t <Nombre que desees> .
+# Posteriormente escribe el siguiente comando
+docker run -d -p 5000:5000 <Nombre que desees>
+
 # Para ejecutar el codigo y crear un nuevo puzzle tienes que poner la ruta con un POST
 http://127.0.0.1:5000/crear
 {
